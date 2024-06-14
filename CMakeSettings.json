@@ -1,0 +1,35 @@
+﻿{
+  "environments": [
+		{
+			"QT_ROOT": "C:/Qt/6.7.0/msvc2019_64"
+		}
+  ],
+  "configurations": [
+    {
+	  "name": "x64-RelWithDebInfo",
+	  "generator": "Ninja",
+	  "configurationType": "RelWithDebInfo",
+	  "inheritEnvironments": [ "msvc_x64_x64" ],
+	  "buildRoot": "${projectDir}\\out\\build\\${name}",
+	  "installRoot": "${projectDir}\\out\\install\\${name}",
+	  "cmakeCommandArgs": "-DDLCA_ENABLE_WEBGL=0 -DCOPY_DEBUG_FILE=0 -DDLCA_NO_LICENSE=0 -DCOPY_DEBUG_FILE_PATH=g:\\work\\cloudapp\\server"
+	},
+	{
+	  "name": "x64-Debug",
+	  "generator": "Ninja",
+	  "configurationType": "Debug",
+	  "inheritEnvironments": [ "msvc_x64_x64" ],
+	  "buildRoot": "${projectDir}\\out\\build\\${name}",
+	  "installRoot": "${projectDir}\\out\\install\\${name}"
+	},
+	{
+	  "name": "x64-Release",
+	  "generator": "Ninja",
+	  "configurationType": "Release",
+	  "inheritEnvironments": [ "msvc_x64_x64" ],
+	  "buildRoot": "${projectDir}\\out\\build\\${name}",
+	  "installRoot": "${projectDir}\\out\\install\\${name}",
+	  "cmakeCommandArgs": "-DCOPY_DEBUG_FILE=FALSE"
+	}
+  ]
+}
