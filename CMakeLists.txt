@@ -26,8 +26,6 @@ find_package(Qt6 COMPONENTS WebSockets REQUIRED)
 find_package(Qt6 COMPONENTS Svg REQUIRED)
 find_package(Qt6 COMPONENTS Core REQUIRED)
 					
-add_compile_options("$<$<C_COMPILER_ID:MSVC>:/source-charset:utf-8>")
-add_compile_options("$<$<CXX_COMPILER_ID:MSVC>:/source-charset:utf-8>")
 
 include_directories(
 	${CMAKE_SOURCE_DIR}/uilib
@@ -35,9 +33,12 @@ include_directories(
 
 set(UI_SOURCES
 	${CMAKE_SOURCE_DIR}/uilib/yk_label.cpp
+	${CMAKE_SOURCE_DIR}/uilib/yk_customer_style.cpp
 )
 
 add_library(ykqtui STATIC ${UI_SOURCES})
+
+target_link_libraries(ykqtui Qt6::Widgets Qt6::Svg)
 
 add_subdirectory(show_example)
 
