@@ -13,7 +13,11 @@ void YKLabel::paintEvent(QPaintEvent* paint_event) {
 	painter.setPen(Qt::NoPen);
 	painter.save();
 
-	painter.setPen(style_.border_attr.color);
+	if (style_.border_attr.width > 0) {
+		QPen pen{ style_.border_attr.color };
+		pen.setWidth(style_.border_attr.width);
+		painter.setPen(pen);
+	}
 	painter.setBrush(QBrush(style_.background_attr.normal_color));
 	painter.drawRoundedRect(0, 0, this->width(), this->height(), style_.border_attr.radius, style_.border_attr.radius);
 	painter.setBrush(Qt::NoBrush);
@@ -22,6 +26,7 @@ void YKLabel::paintEvent(QPaintEvent* paint_event) {
 	font.setFamily("Microsoft YaHei");
 	font.setPixelSize(style_.text_attr.px_size);
 	font.setBold(style_.text_attr.bold);
+	font.setUnderline(style_.text_attr.have_under_line);
 	painter.setPen(QColor{ style_ .text_attr.color});
 	painter.setFont(font);
 	//By default, the text will be centered, and we will consider padding and other adjustments later.

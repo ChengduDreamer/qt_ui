@@ -34,6 +34,9 @@ include_directories(
 set(UI_SOURCES
 	${CMAKE_SOURCE_DIR}/uilib/yk_label.cpp
 	${CMAKE_SOURCE_DIR}/uilib/yk_customer_style.cpp
+	${CMAKE_SOURCE_DIR}/uilib/yk_vbox_layout.cpp
+	${CMAKE_SOURCE_DIR}/uilib/yk_hbox_layout.cpp
+	${CMAKE_SOURCE_DIR}/uilib/yk_basic_button.cpp
 )
 
 add_library(ykqtui STATIC ${UI_SOURCES})

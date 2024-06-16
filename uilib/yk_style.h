@@ -15,14 +15,25 @@ public:
 	bool bold = false;
 	int px_size = 0;
 	QString text = "";
+	bool have_under_line = false;
 };
 
 class BackgroundAttribute {
 public:
 	QColor normal_color = 0xffffff;
+	QColor hover_color = 0xffffff;
+	QColor press_color = 0xffffff;
+	QColor checked_color = 0xffffff;
 };
 
 class LabelStyle {
+public:
+	BorderAttribute border_attr;
+	TextAttribute text_attr;
+	BackgroundAttribute background_attr;
+};
+
+class BtnStyle {
 public:
 	BorderAttribute border_attr;
 	TextAttribute text_attr;
