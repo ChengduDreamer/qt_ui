@@ -5,6 +5,7 @@
 #include "yk_vbox_layout.h"
 #include "yk_hbox_layout.h"
 #include "yk_basic_button.h"
+#include "yk_img_button.h"
 
 int main(int argc,char** argv){
 	initYKStyle();
@@ -27,6 +28,22 @@ int main(int argc,char** argv){
 
 	hbox_line_1_layout->addSpacing(8);
 	hbox_line_1_layout->addWidget(basic_button);
+
+	YKImgButton* svg_img_button = new YKImgButton(&widget);
+	svg_img_button->SetStyle(g_model_1_btn_style);
+	svg_img_button->setFixedSize(100, 100);
+
+	hbox_line_1_layout->addSpacing(8);
+	hbox_line_1_layout->addWidget(svg_img_button);
+
+	YKImgButton* png_img_button = new YKImgButton(&widget);
+	png_img_button->SetStyle(g_model_2_btn_style);
+	png_img_button->setFixedSize(100, 100);
+
+	hbox_line_1_layout->addSpacing(8);
+	hbox_line_1_layout->addWidget(png_img_button);
+
+
 
 	vbox_main_layout->addLayout(hbox_line_1_layout);
 

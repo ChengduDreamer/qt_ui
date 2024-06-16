@@ -37,6 +37,7 @@ set(UI_SOURCES
 	${CMAKE_SOURCE_DIR}/uilib/yk_vbox_layout.cpp
 	${CMAKE_SOURCE_DIR}/uilib/yk_hbox_layout.cpp
 	${CMAKE_SOURCE_DIR}/uilib/yk_basic_button.cpp
+	${CMAKE_SOURCE_DIR}/uilib/yk_img_button.cpp
 )
 
 add_library(ykqtui STATIC ${UI_SOURCES})

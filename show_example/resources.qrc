@@ -1,6 +1,7 @@
 <RCC>
     <qresource prefix="/">
-       
+		<file>res/png/file.png</file>
+		<file>res/svg/folder.svg</file>
 	</qresource>
     <qresource prefix="/qt">
         <file>etc/qt.conf</file>

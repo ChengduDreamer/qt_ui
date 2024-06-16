@@ -2,6 +2,11 @@
 #include <qstring.h>
 #include <qcolor.h>
 
+enum class EYKImageType {
+	kPng,
+	kSvg
+};
+
 class BorderAttribute {
 public:
 	int width = 0;
@@ -26,6 +31,12 @@ public:
 	QColor checked_color = 0xffffff;
 };
 
+class ImageAttribute {
+public:
+	EYKImageType image_type = EYKImageType::kPng;
+	QString img_path;
+};
+
 class LabelStyle {
 public:
 	BorderAttribute border_attr;
@@ -38,4 +49,5 @@ public:
 	BorderAttribute border_attr;
 	TextAttribute text_attr;
 	BackgroundAttribute background_attr;
+	ImageAttribute img_attr;
 };
