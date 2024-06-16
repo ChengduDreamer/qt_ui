@@ -1,6 +1,5 @@
 #include "yk_label.h"
 #include <qfont.h>
-#include "yk_customer_style.h"
 
 YKLabel::YKLabel(QWidget* parent) : QLabel(parent) {
 	setAttribute(Qt::WA_StyledBackground);

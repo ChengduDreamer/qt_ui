@@ -1,5 +1,6 @@
 add_executable(show_example_1 #WIN32
 	show_example_1.cpp
+	customer_style.cpp
 	resources.qrc
 )
 
